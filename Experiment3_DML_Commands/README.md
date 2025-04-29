@@ -45,125 +45,156 @@ Used to retrieve records from a table.
 ```sql
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
+### Submission:
+Dharshni V M - 212223240029
+
 **Question 1**
---
--- Paste Question 1 here
+
+![Q1](https://github.com/user-attachments/assets/116a6853-79bd-41ca-92a3-707ac528d0b4)
 
 ```sql
--- Paste your SQL code below for Question 1
+UPDATE Products
+SET sell_price = sell_price*1.15
+WHERE quantity < 50;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![A1](https://github.com/user-attachments/assets/0b1eedf1-837b-4a02-a992-84ed5c2a6584)
 
 **Question 2**
----
--- Paste Question 2 here
+
+![Q2](https://github.com/user-attachments/assets/e77e7edc-d891-4bd0-8c79-03ad27fec8a8)
 
 ```sql
--- Paste your SQL code below for Question 2
+UPDATE Employees 
+SET email = 'not available',
+commission_pct = 0.55
+WHERE department_id = 110;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![A2](https://github.com/user-attachments/assets/45ca420e-310b-4b3e-844b-9835d10c183c)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![Q3](https://github.com/user-attachments/assets/0ea27e46-4672-4a30-98da-719c260ff3b2)
 
 ```sql
--- Paste your SQL code below for Question 3
+UPDATE Products
+SET sell_price = sell_price*1.10
+WHERE category = 'Bakery';
 ```
 
 **Output:**
 
-![Output3](output.png)
+![A3](https://github.com/user-attachments/assets/66bd1e40-6caa-4130-a62d-bece57fc2536)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![Q4](https://github.com/user-attachments/assets/38f71cd6-c19b-4602-b98b-04d1b2f8faa6)
 
 ```sql
--- Paste your SQL code below for Question 4
+DELETE FROM customer
+WHERE GRADE % 2 != 0;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![A4](https://github.com/user-attachments/assets/82df8eff-6f91-46cf-8b7c-9f5adee6b7a9)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![Q5](https://github.com/user-attachments/assets/30f84bdc-3c0b-457b-925f-8ffcdf2373a8)
 
 ```sql
--- Paste your SQL code below for Question 5
+DELETE FROM Doctors 
+WHERE specialization = 'Cardiology';
 ```
 
 **Output:**
 
-![Output5](output.png)
+![A5](https://github.com/user-attachments/assets/8adcea18-084e-445d-a6d0-457d36854428)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![Q6](https://github.com/user-attachments/assets/03a1f1fc-33e5-4759-bad8-4adad668f59c)
 
 ```sql
--- Paste your SQL code below for Question 6
+DELETE FROM Customer
+WHERE CUST_COUNTRY = 'UK'
+AND WORKING_AREA = 'London'
+AND GRADE < 3;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![A6](https://github.com/user-attachments/assets/28212a0c-8093-4c19-b549-3fdd9ce445b8)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Q7](https://github.com/user-attachments/assets/6bf3e31e-67ff-4464-8124-856a7c45bd6c)
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT CategoryName, Description
+FROM categories
+ORDER BY CategoryName;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![A7](https://github.com/user-attachments/assets/cc35947d-5cbb-4d86-9f5c-a20b6d27a35c)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![Q8](https://github.com/user-attachments/assets/f2b07159-bbc0-41e3-a81d-1d211b456311)
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT *
+FROM Employeeinfo
+WHERE EmpLname LIKE '____A';
 ```
 
 **Output:**
 
-![Output8](output.png)
+![A8](https://github.com/user-attachments/assets/f9cceba5-1d73-4f5e-aa3c-5f7b67f0ca6f)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![Q9](https://github.com/user-attachments/assets/68e64c6f-0e29-4000-a81e-ea2323cab7ab)
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT salesman_id, name, city, commission
+FROM salesman
+WHERE city != 'Paris'
+AND city != 'Rome';
 ```
 
 **Output:**
 
-![Output9](output.png)
+![A9](https://github.com/user-attachments/assets/adfa70f0-a1bd-4047-94f4-61ea922761d9)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![Q10](https://github.com/user-attachments/assets/5410ceeb-52d4-4ecd-9ccc-cbffe05047b4)
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT 
+ename,
+job,
+(substr(ename,1,3) || substr(job,length(job)-2,3))
+AS ConcatenatedString
+FROM emp;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![A10](https://github.com/user-attachments/assets/c5fe27ed-7963-4e94-b1da-9a19a7ab528f)
+
+### Module-2 Grade:
+
+![M2](https://github.com/user-attachments/assets/855b0021-0928-4117-ab86-4d2fb7347adb)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
