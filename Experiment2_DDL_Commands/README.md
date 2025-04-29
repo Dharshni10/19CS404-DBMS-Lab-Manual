@@ -106,6 +106,7 @@ CREATE TABLE Table_Name (
 Dharshni V M - 212223240029
 
 **Question 1**
+
 ![Q1](https://github.com/user-attachments/assets/e11a7152-453e-427c-ace6-8d9f846540b2)
 
 ```sql
@@ -121,9 +122,11 @@ FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 ```
 
 **Output:**
+
 ![A1](https://github.com/user-attachments/assets/86235bca-2ddc-4f2d-a158-2b89bad9b01d)
 
 **Question 2**
+
 ![Q2](https://github.com/user-attachments/assets/3c1a3134-7b62-4044-98fe-b6d7444c4d0d)
 
 ```sql
@@ -132,9 +135,11 @@ ADD Date_of_birth Date;
 ```
 
 **Output:**
+
 ![A2](https://github.com/user-attachments/assets/deaa9450-4ab5-46e8-b07f-b1f423fc10b3)
 
 **Question 3**
+
 ![Q3](https://github.com/user-attachments/assets/94141be7-acae-43b7-bf7f-708012bdb1f8)
 
 ```sql
@@ -149,9 +154,11 @@ VALUES (108, "Wireless Earbuds", "Accessories", NULL, 100);
 ```
 
 **Output:**
+
 ![A3](https://github.com/user-attachments/assets/11c330f1-889b-436e-a09d-c08f0e327371)
 
 **Question 4**
+
 ![Q4](https://github.com/user-attachments/assets/3f078f30-ea5b-4021-8733-b6417a2cceee)
 
 ```sql
@@ -160,9 +167,11 @@ SELECT EmployeeID, Name, Department, Salary FROM Former_employees;
 ```
 
 **Output:**
+
 ![A4](https://github.com/user-attachments/assets/7cd124b6-20c9-42d3-bdb1-48bb41f38dce)
 
 **Question 5**
+
 ![Q5](https://github.com/user-attachments/assets/4c3e15c9-f268-477b-91d8-98807f6f3427)
 
 ```sql
@@ -175,9 +184,11 @@ Stock INTEGER CHECK(Stock >= 0)
 ```
 
 **Output:**
+
 ![A5](https://github.com/user-attachments/assets/8dc31525-b4ab-46a2-9f76-ed471031a158)
 
 **Question 6**
+
 ![Q6](https://github.com/user-attachments/assets/cf0e68b8-14aa-4acd-b001-07721ec8e9d3)
 
 ```sql
@@ -193,11 +204,12 @@ ON DELETE SET NULL
 ```
 
 **Output:**
+
 ![A6](https://github.com/user-attachments/assets/ffe49c70-7513-4e9e-94cb-1f66f0279f94)
 
 **Question 7**
-![Q7](https://github.com/user-attachments/assets/af087f93-4625-48bf-8a4d-1ecea52c9357)
 
+![Q7](https://github.com/user-attachments/assets/af087f93-4625-48bf-8a4d-1ecea52c9357)
 
 ```sql
 CREATE TABLE contacts(
@@ -210,9 +222,11 @@ phone TEXT NOT NULL CHECK(Length(phone) >= 10)
 ```
 
 **Output:**
+
 ![A7](https://github.com/user-attachments/assets/ccffa308-254e-49f2-8d40-e3211fcf008d)
 
 **Question 8**
+
 ![Q8](https://github.com/user-attachments/assets/2179cbf1-00ab-42c1-964c-719f2d05f9a3)
 
 ```sql
@@ -221,9 +235,11 @@ ADD mobilenumber number;
 ```
 
 **Output:**
+
 ![A8](https://github.com/user-attachments/assets/30abeb4d-d97d-4eae-a1c4-723d644052c4)
 
 **Question 9**
+
 ![Q9](https://github.com/user-attachments/assets/1ea61151-7cce-458c-b56a-30a8a7eda491)
 
 ```sql
@@ -234,9 +250,11 @@ DueDate DATE);
 ```
 
 **Output:**
+
 ![A9](https://github.com/user-attachments/assets/3562eb28-f660-450c-8d3d-ae824bc4b4f8)
 
 **Question 10**
+
 ![Q10](https://github.com/user-attachments/assets/3175834d-4228-40f3-8286-112b2c6253e0)
 
 ```sql
@@ -245,7 +263,11 @@ VALUES (201, "David Lee", "M", "Physics", 92);
 ```
 
 **Output:**
+
 ![A10](https://github.com/user-attachments/assets/0f9467f8-f6b6-4b35-971a-0407cf369ba5)
+
+### Module-1 Grade:
+![M1](https://github.com/user-attachments/assets/eae0c639-8d78-4fa0-b32e-8b74da4bee9a)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
