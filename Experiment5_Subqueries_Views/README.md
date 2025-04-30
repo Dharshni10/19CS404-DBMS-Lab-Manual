@@ -35,127 +35,184 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```sql
 DROP VIEW view_name;
 ```
+### Submission:
+
+Dharshni V M - 212223240029
 
 **Question 1**
---
--- Paste Question 1 here
+
+![Q1](https://github.com/user-attachments/assets/97f90fab-1c6c-4749-9d54-c35cd1d286c0)
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT ord_no, purch_amt, ord_date, customer_id, salesman_id
+FROM orders
+WHERE salesman_id IN (
+    SELECT salesman_id
+    FROM orders
+    WHERE customer_id = 3007
+);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![A1](https://github.com/user-attachments/assets/c6b4b708-d329-4cff-9b92-5018f83d3e64)
 
 **Question 2**
----
--- Paste Question 2 here
+
+![Q2](https://github.com/user-attachments/assets/efc4d49a-46f5-4d13-8a49-807de614b872)
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT *
+FROM GRADES g
+WHERE grade = (
+    SELECT MAX(grade)
+    FROM GRADES
+    WHERE subject = g.subject
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![A2](https://github.com/user-attachments/assets/5d9be0ef-4003-4130-845d-b6d719318fb1)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![Q3](https://github.com/user-attachments/assets/7ead818b-f9f1-403d-af54-035675af6782)
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT *
+FROM Medications
+WHERE CAST(REPLACE(dosage, 'mg', '') AS INT) = (
+    SELECT MIN(CAST(REPLACE(dosage, 'mg', '') AS INT))
+    FROM Medications
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![A3](https://github.com/user-attachments/assets/f0303c57-f11b-4045-96ee-e36ce122dc50)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![Q4](https://github.com/user-attachments/assets/0ca2757b-19eb-4537-bd95-419e109ea0f3)
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM ORDERS o
+JOIN SALESMAN s ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
 ```
 
 **Output:**
 
-![Output4](output.png)
+![A4](https://github.com/user-attachments/assets/2e8365ae-8e00-45d5-81ee-f23f0c2069e9)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![Q5](https://github.com/user-attachments/assets/20f7fe8b-65cf-4873-94c8-eb9c86d934c7)
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT *
+FROM CUSTOMERS
+WHERE AGE < 30;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![A5](https://github.com/user-attachments/assets/e52e19a0-9d13-4df2-b02b-62384067520c)
 
 **Question 6**
----
--- Paste Question 6 here
+
+![Q6](https://github.com/user-attachments/assets/702f885c-db8e-42db-80a7-e92dcf0a30b1)
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.name = 'Paul Adam';
 ```
 
 **Output:**
 
-![Output6](output.png)
+![A6](https://github.com/user-attachments/assets/bce81ba8-2675-419e-92a3-20671a9e4c79)
 
 **Question 7**
----
--- Paste Question 7 here
+
+![Q7](https://github.com/user-attachments/assets/b9d32099-11b7-41b6-ae78-1ab6e1c295b8)
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT g.student_name, g.grade
+FROM GRADES g
+JOIN (
+    SELECT subject, MIN(grade) as min_grade
+    FROM GRADES
+    GROUP BY subject
+) subq ON g.subject = subq.subject AND g.grade = subq.min_grade
+ORDER BY g.student_name;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![A7](https://github.com/user-attachments/assets/c0701887-0bdf-4ee6-ba63-5c3771700fa9)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![Q8](https://github.com/user-attachments/assets/2ff96b0b-d6f5-4087-a2dc-bc17ed5352ad)
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT s.salesman_id, s.name
+FROM salesman s
+JOIN (
+    SELECT salesman_id, COUNT(customer_id) as customer_count
+    FROM customer
+    GROUP BY salesman_id
+    HAVING COUNT(customer_id) > 1
+) c ON s.salesman_id = c.salesman_id
+ORDER BY s.salesman_id;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![A8](https://github.com/user-attachments/assets/816abc91-e77c-4a19-8cc5-57847024395d)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![Q9](https://github.com/user-attachments/assets/7d97c734-2746-4a63-8b13-ce70ba3f23bc)
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT *
+FROM CUSTOMERS
+WHERE SALARY > 4500
+ORDER BY ID;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![A9](https://github.com/user-attachments/assets/10bff39f-3e2d-4197-a9b5-544c6eb000c8)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![Q10](https://github.com/user-attachments/assets/366882ff-295b-4ae9-9247-e4ab56245843)
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT name
+FROM customer
+WHERE phone IN (
+    SELECT phone
+    FROM customer
+    GROUP BY phone
+    HAVING COUNT(*) = 1
+)
+ORDER BY id;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![A10](https://github.com/user-attachments/assets/c6a49bc4-52ad-4b6c-ae65-ca7f222acddc)
 
+### Module-4 Grade:
+
+![M4](https://github.com/user-attachments/assets/b232084d-0a46-49d6-b209-3a39d8b973f9)
 
 ## RESULT
 Thus, the SQL queries to implement subqueries and views have been executed successfully.
